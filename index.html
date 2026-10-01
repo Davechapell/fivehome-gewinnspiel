@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>fivehome Gewinnspiel – 3D-Analyse</title>
-<meta name="description" content="Nur für fivehome-Mitglieder: Wir verlosen drei 3D-Analysen. Haltung, Achsen und Muskelbefund in Zahlen – gemeinsam besprochen. Teilnahmeschluss 30. September 2026.">
+<title>fivehome 3D-Analyse</title>
+<meta name="description" content="Neu bei fivehome: die 3D-Analyse. Haltung, Achsen und Muskelbefund in Zahlen – gemeinsam besprochen. Herbst-Startpreis für Mitglieder 149 € bis 31. Oktober.">
 <meta name="theme-color" content="#f2efe8">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="fivehome">
-<meta property="og:title" content="fivehome Gewinnspiel – 3D-Analyse">
-<meta property="og:description" content="Nur für fivehome-Mitglieder: Wir verlosen drei 3D-Analysen. Haltung, Achsen und Muskelbefund in Zahlen – gemeinsam besprochen. Teilnahmeschluss 30. September 2026.">
+<meta property="og:title" content="fivehome 3D-Analyse">
+<meta property="og:description" content="Neu bei fivehome: die 3D-Analyse. Haltung, Achsen und Muskelbefund in Zahlen – gemeinsam besprochen. Herbst-Startpreis für Mitglieder 149 € bis 31. Oktober.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -342,6 +342,20 @@ a{color:inherit}
 .legalnav a:hover{border-bottom-color:var(--ink);color:var(--ink)}
 footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size:11.5px;font-weight:300;
   color:var(--ink-3);display:flex;flex-wrap:wrap;gap:10px 32px;justify-content:space-between}
+
+/* ── Terminanfrage (Oktober 2026) ─────────────────────────── */
+.opt{letter-spacing:.08em;text-transform:none;font-weight:300;color:var(--ink-2);margin-left:6px}
+.meta__a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+.meta__a:hover{border-bottom-color:var(--ink)}
+.tier__x s{color:var(--ink-2)}
+.pick{grid-column:1/-1;border:0;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.pick legend{font-size:10px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);margin-bottom:12px;padding:0}
+.pick label{position:relative;cursor:pointer}
+.pick input{position:absolute;opacity:0;pointer-events:none}
+.pick span{display:inline-block;padding:10px 18px;border:1px solid var(--rule);font-size:13.5px;font-weight:300;color:var(--ink-2);background:transparent;transition:border-color .2s,background .2s}
+.pick label:hover span{border-color:var(--ink-3)}
+.pick input:checked + span{border-color:var(--petrol);background:var(--sheet);color:var(--ink);font-weight:400;box-shadow:inset 0 -2px 0 var(--petrol)}
+.pick input:focus-visible + span{outline:2px solid var(--petrol);outline-offset:2px}
 </style>
 
 </head>
@@ -362,15 +376,15 @@ footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size
 
     <div class="opening">
       <div class="opening__text">
-        <p class="over">Gewinnspiel &middot; nur für Mitglieder</p>
+        <p class="over">Neu &middot; ab sofort buchbar</p>
         <h1>Einmal komplett<br>vermessen.</h1>
-        <p class="lede">Wir verlosen drei <em>fivehome 3D-Analysen</em> – deine Haltung, deine Achsen und dein Muskelbefund in Zahlen, gemeinsam besprochen und digital zum Nachlesen.</p>
-        <p class="lede">Der Scan dauert dreißig Sekunden. Was er sichtbar macht, hat sich über Jahre aufgebaut – und die meisten Menschen sehen es zum ersten Mal.</p>
+        <p class="lede">Die <em>fivehome 3D-Analyse</em> zeigt deine Haltung, deine Achsen und deinen Muskelbefund in Zahlen – gemeinsam besprochen und digital zum Nachlesen.</p>
+        <p class="lede">Was sie sichtbar macht, hat sich über Jahre aufgebaut. Die meisten Menschen sehen es zum ersten Mal – und wissen danach, wo ihr Training ansetzen sollte.</p>
         <div class="opening__cta">
-          <a class="btn" href="#mitmachen">Teilnehmen</a>
+          <a class="btn" href="#termin">Termin anfragen</a>
           <a class="btn btn--quiet" href="#profil">Was gemessen wird</a>
         </div>
-        <p class="hint">Mitmachen dauert eine halbe Minute.</p>
+        <p class="hint js-aktion">Herbst-Startpreis für Mitglieder: 149 € statt 199 € – nur bis 31. Oktober.</p>
       </div>
 
       <!-- 3D-Scan: Mesh-Darstellung im Gerätelook -->
@@ -471,9 +485,10 @@ footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size
 <div class="band band--deep">
   <div class="wrap">
     <div class="meta">
-      <div class="meta__i"><span class="meta__k">Teilnahmeschluss</span><span class="meta__v">Mittwoch, 30. September 2026</span><span class="meta__r" id="rest" hidden></span></div>
-      <div class="meta__i"><span class="meta__k">Ziehung</span><span class="meta__v">Donnerstag, 1. Oktober 2026</span></div>
-      <div class="meta__i"><span class="meta__k">Verlost werden</span><span class="meta__v">Drei 3D-Analysen</span></div>
+      <div class="meta__i js-aktion"><span class="meta__k">Herbst-Startpreis &middot; Mitglieder</span><span class="meta__v">149 € statt 199 €</span><span class="meta__r" id="rest" hidden></span></div>
+      <div class="meta__i js-regulaer" hidden><span class="meta__k">Für Mitglieder</span><span class="meta__v">199 €</span></div>
+      <div class="meta__i"><span class="meta__k">Neu bei fivehome</span><span class="meta__v">299 € &middot; mit Gutschein 199 €</span></div>
+      <div class="meta__i"><span class="meta__k">Termin</span><span class="meta__v"><a class="meta__a" href="tel:+4925160688844">0251 60688844</a></span></div>
     </div>
   </div>
 </div>
@@ -482,7 +497,7 @@ footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size
   <div class="wrap">
     <section class="sec" id="profil">
       <div class="sec__head">
-        <p class="over">Der Gewinn</p>
+        <p class="over">Die 3D-Analyse</p>
         <h2>Was die 3D-Analyse zeigt</h2>
         <p class="lede">Ein Spiegel zeigt dir, wie du aussiehst. Die 3D-Analyse zeigt, wie du stehst – gemessen statt geschätzt, in Zahlen, die man nebeneinanderlegen kann. Und weil Zahlen allein nichts nützen, gehen wir sie zusammen durch.</p>
       </div>
@@ -492,7 +507,7 @@ footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size
           <span class="three__k">Ebene 01</span>
           <span class="three__t">Haltung</span>
           <span class="three__d">Wie du stehst, wenn du nicht darüber nachdenkst. Ein Tiefensensor tastet dich punktweise ab und baut daraus ein dreidimensionales Modell – Achsen, Symmetrie, das Lot vom Kopf bis zum Fuß.</span>
-          <span class="three__m">30 Sekunden. Keine Marker auf der Haut, keine Strahlung.</span>
+          <span class="three__m">Keine Marker auf der Haut, keine Strahlung.</span>
         </div>
         <div>
           <span class="three__k">Ebene 02</span>
@@ -509,14 +524,13 @@ footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size
       </div>
 
       <div class="figures">
-        <div><span class="num figures__v">30 s</span><span class="figures__k">dauert der Scan. Der Rest des Termins gehört dem Gespräch.</span></div>
+        <div><span class="num figures__v">3</span><span class="figures__k">Ebenen: Haltung, Bewegung und Muskelbefund in einem Termin.</span></div>
         <div><span class="num figures__v">87</span><span class="figures__k">Muskeln werden auf Verkürzung und Schwäche bewertet.</span></div>
         <div><span class="num figures__v">10</span><span class="figures__k">Kennwerte – vom Kopfvorschub bis zur Beckenrotation.</span></div>
         <div><span class="num figures__v">37.000</span><span class="figures__k">Vergleichsprofile stehen hinter der Einordnung.</span></div>
       </div>
       <p class="src">Technische Angaben des Systemherstellers MotiPhysio.</p>
 
-      <!-- Zwei Stufen: der Gewinn steht für sich, das Profil baut darauf auf. -->
       <div class="chainhead">
         <h3>Zwei Stufen, eine Messung</h3>
         <p class="measure">Die 3D-Analyse steht für sich: Sie zeigt dir, wo du stehst, und das reicht vielen völlig. Wer daraus einen Weg machen will, baut das Bewegungsprofil darauf auf – dieselbe Messung, dazu das Gespräch, die Tests und ein Plan zum Mitnehmen.</p>
@@ -524,9 +538,10 @@ footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size
 
       <div class="tiers">
         <div class="tier tier--now">
-          <p class="over">Das wird verlost</p>
+          <p class="over">Der Einstieg</p>
           <h3 class="tier__t">fivehome 3D-Analyse</h3>
-          <p class="tier__p"><span class="num">199 &euro;</span><span class="tier__x">für Mitglieder &middot; 299 &euro; für alle anderen</span></p>
+          <p class="tier__p js-aktion"><span class="num">149 &euro;</span><span class="tier__x"><s>199 &euro;</s> für Mitglieder bis 31. Oktober &middot; 299 &euro; für alle anderen</span></p>
+          <p class="tier__p js-regulaer" hidden><span class="num">199 &euro;</span><span class="tier__x">für Mitglieder &middot; 299 &euro; für alle anderen</span></p>
           <ul class="tier__l">
             <li>3D-Scan im Stand und in Bewegung</li>
             <li>Muskelbefund: 87 Muskeln auf Verkürzung und Abschwächung</li>
@@ -554,8 +569,8 @@ footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size
         <div class="result__text">
           <h3>Und das kommt dabei heraus</h3>
           <p class="measure">Kein Ausdruck voller Fachchinesisch, sondern ein Bild, das man in fünf Minuten versteht: Wo du stehst, was auffällt, und was davon Aufmerksamkeit verdient.</p>
-          <p class="measure">Wir gehen es gemeinsam durch – ohne dir hinterher etwas verkaufen zu wollen. Den Bericht bekommst du digital zum Nachlesen, er gehört dir.</p>
-          <p class="measure">Und weil alles in Zahlen steht, lässt sich dieselbe Messung später wiederholen. Dann siehst du nicht, ob sich etwas besser anfühlt – sondern ob es besser geworden ist.</p>
+          <p class="measure">Wir gehen es gemeinsam durch. Den Bericht bekommst du digital zum Nachlesen, er gehört dir.</p>
+          <p class="measure">Und weil alles in Zahlen steht, messen wir nach zwölf Wochen noch einmal. Dann siehst du nicht, ob sich etwas besser anfühlt – sondern ob es besser geworden ist. Den Termin legen wir gleich mit fest (Verlaufskontrolle 199 €).</p>
         </div>
         <div>
           <div class="scale">
@@ -569,9 +584,9 @@ footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size
         </div>
       </div>
 
-      <div class="claim">
-        <span class="num claim__v">3 &times; 199 &euro;</span>
-        <span class="claim__n">Drei vollständige 3D-Analysen, für dich kostenlos.<br>Wir ziehen am 1. Oktober und melden uns persönlich.</span>
+      <div class="claim js-aktion">
+        <span class="num claim__v">149 &euro;</span>
+        <span class="claim__n">Herbst-Startpreis für Mitglieder, nur bis 31. Oktober.<br>Danach kostet die 3D-Analyse für Mitglieder wieder 199 €.</span>
       </div>
     </section>
   </div>
@@ -582,11 +597,10 @@ footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size
     <section class="sec">
       <div class="gift">
         <div class="gift__text">
-          <p class="over">Für alle, die mitmachen</p>
-          <h2>Einer gewinnt. Zwei freuen sich.</h2>
-          <p class="lede">Drei Mitglieder ziehen das große Los. Alle anderen gehen trotzdem nicht leer aus: Nach deiner Teilnahme bekommst du einen digitalen Gutschein per E-Mail – für einen Menschen, dem du etwas Gutes willst.</p>
-          <p class="lede">Damit bekommt deine Schwester, dein Kollege oder der Freund, der seit zwei Jahren „mal was für den Rücken machen" will, die 3D-Analyse für <em>199 € statt 299 €</em>. Also genau das, was du als Mitglied zahlst – du gibst deinen Preis weiter.</p>
-          <p class="lede">Und ja: Wird er noch vor der Ziehung eingelöst, verschafft dir das ein zweites Los.</p>
+          <p class="over">Gewinnspiel September &middot; beendet</p>
+          <h2>Das Los ist gefallen.</h2>
+          <p class="lede">Danke an alle, die mitgemacht haben! Die drei Gewinner benachrichtigen wir persönlich per E-Mail – zum Einlösen einfach unten einen Termin anfragen.</p>
+          <p class="lede">Nicht gewonnen? Dein <em>Gutschein über 100 €</em> gilt weiter bis 31. Dezember. Damit bekommt deine Schwester, dein Kollege oder der Freund, der seit zwei Jahren „mal was für den Rücken machen" will, die 3D-Analyse für 199 € statt 299 € – also deinen Mitgliederpreis.</p>
         </div>
         <div class="card">
           <span class="card__b" style="display:flex;align-items:center;gap:10px"><i class="logo logo--s" aria-hidden="true"></i>fivehome</span>
@@ -616,9 +630,9 @@ footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size
     <section class="sec sec--tight">
       <div class="sec__head"><p class="over">So läuft es</p><h2>Drei Schritte</h2></div>
       <div class="walk">
-        <div><span class="walk__n">01</span><span class="walk__t">Formular ausfüllen</span><span class="walk__d">Name, E-Mail, fertig. Der Vorname für den Gutschein ist freiwillig.</span></div>
-        <div><span class="walk__n">02</span><span class="walk__t">Gutschein kommt</span><span class="walk__d">Innerhalb von zwei Werktagen liegt er im Postfach – auf deinen Namen. Dein Los ist gleichzeitig im Topf.</span></div>
-        <div><span class="walk__n">03</span><span class="walk__t">Ziehung am 1. Oktober</span><span class="walk__d">Die drei Gewinner benachrichtigen wir persönlich und vereinbaren gleich den Termin.</span></div>
+        <div><span class="walk__n">01</span><span class="walk__t">Termin anfragen</span><span class="walk__d">Über das Formular, beim Team im Studio oder telefonisch unter 0251 60688844.</span></div>
+        <div><span class="walk__n">02</span><span class="walk__t">Messen und besprechen</span><span class="walk__d">Scan im Stand und in Bewegung, danach gehen wir deine Ergebnisse gemeinsam durch. Den Bericht bekommst du digital.</span></div>
+        <div><span class="walk__n">03</span><span class="walk__t">Nach zwölf Wochen vergleichen</span><span class="walk__d">Dieselbe Messung noch einmal – und du siehst schwarz auf weiß, was sich getan hat.</span></div>
       </div>
     </section>
   </div>
@@ -626,27 +640,44 @@ footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size
 
 <div class="band band--sheet">
   <div class="wrap wrap--slim">
-    <section class="sec" id="mitmachen">
+    <section class="sec" id="termin">
       <div class="sec__head">
-        <p class="over">Teilnahme</p>
-        <h2>Los ziehen, Gutschein sichern</h2>
-        <p class="lede">Teilnahmeschluss ist Mittwoch, der 30. September 2026, um 23:59 Uhr.</p>
+        <p class="over">Termin</p>
+        <h2>Termin anfragen</h2>
+        <p class="lede">Sag uns kurz, wer du bist und was du möchtest. Wir melden uns mit Terminvorschlägen.</p>
       </div>
 
       <form id="entry" novalidate>
         <div class="form">
           <div class="f"><label for="vorname">Vorname</label><input id="vorname" name="vorname" type="text" autocomplete="given-name" placeholder="Anna" required></div>
           <div class="f"><label for="nachname">Nachname</label><input id="nachname" name="nachname" type="text" autocomplete="family-name" placeholder="Bergmann" required></div>
-          <div class="f f--full"><label for="email">E-Mail-Adresse</label><input id="email" name="email" type="email" autocomplete="email" placeholder="anna.bergmann@beispiel.de" required>
-            <span class="h">Hierhin schicken wir deinen Gutschein – und im besten Fall die Gewinnbenachrichtigung.</span></div>
-          <div class="f f--full sep"><p class="over">Freiwillig</p><label for="fuer">Für wen ist der Gutschein?</label>
-            <input id="fuer" name="fuer" type="text" placeholder="Vorname genügt">
-            <span class="h">Wir schreiben den Namen auf den Gutschein. Du bekommst ihn selbst und gibst ihn weiter – wir schreiben niemanden ungefragt an.</span></div>
+          <div class="f"><label for="email">E-Mail-Adresse</label><input id="email" name="email" type="email" autocomplete="email" placeholder="anna.bergmann@beispiel.de" required></div>
+          <div class="f"><label for="tel">Telefon <span class="opt">freiwillig</span></label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="Für die schnelle Absprache"></div>
+
+          <fieldset class="pick f--full">
+            <legend>Ich bin …</legend>
+            <label><input type="radio" name="wer" value="Mitglied" checked><span>fivehome-Mitglied</span></label>
+            <label><input type="radio" name="wer" value="Neu bei fivehome"><span>neu bei fivehome</span></label>
+            <label><input type="radio" name="wer" value="Gewinner Gewinnspiel September"><span>Gewinner im Gewinnspiel</span></label>
+          </fieldset>
+
+          <fieldset class="pick f--full" id="wasBox">
+            <legend>Ich interessiere mich für …</legend>
+            <label><input type="radio" name="was" value="3D-Analyse" checked><span>die 3D-Analyse</span></label>
+            <label><input type="radio" name="was" value="Bewegungsprofil"><span>das Bewegungsprofil</span></label>
+            <label><input type="radio" name="was" value="Noch unsicher – bitte beraten"><span>weiß ich noch nicht</span></label>
+          </fieldset>
+
+          <div class="f f--full" id="codeBox" hidden><label for="code">Gutschein-Code <span class="opt">falls vorhanden</span></label>
+            <input id="code" name="code" type="text" autocomplete="off" placeholder="FH-SCAN-…" style="text-transform:uppercase"></div>
+
+          <div class="f f--full"><label for="wann">Wann passt es dir? <span class="opt">freiwillig</span></label>
+            <input id="wann" name="wann" type="text" placeholder="z. B. dienstags ab 17 Uhr, Samstagvormittag"></div>
+
           <div class="agree">
-            <label class="ag"><input type="checkbox" id="agb" name="agb" required><span>Ich bin fivehome-Mitglied, mindestens 18 Jahre alt und habe die Teilnahmebedingungen und den Datenschutzhinweis gelesen.</span></label>
-            <label class="ag"><input type="checkbox" id="news" name="news"><span>Ich möchte die fivehome Club News per E-Mail bekommen. (Freiwillig, jederzeit abbestellbar – hat keinen Einfluss auf die Teilnahme.)</span></label>
+            <label class="ag"><input type="checkbox" id="agb" name="agb" required><span>Ich habe den Datenschutzhinweis unten gelesen. Meine Angaben werden nur für die Terminvereinbarung genutzt.</span></label>
           </div>
-          <div class="go"><button class="btn" type="submit">Jetzt teilnehmen</button>
+          <div class="go"><button class="btn" type="submit">Anfrage senden</button>
             <span class="h">Es öffnet sich deine E-Mail-App mit einer fertigen Nachricht. Nur noch abschicken.</span></div>
         </div>
         <p class="oops" id="err" hidden></p>
@@ -655,15 +686,15 @@ footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size
       <div class="thanks" id="done" hidden>
         <p class="over">Fast geschafft</p>
         <h2 id="doneName">Deine E-Mail ist vorbereitet.</h2>
-        <p class="measure">Wir haben deine Teilnahme in einer E-Mail zusammengestellt und deine Mail-App geöffnet. <em>Bitte schick die Nachricht ab</em> – erst dann ist dein Los im Topf.</p>
+        <p class="measure">Wir haben deine Anfrage in einer E-Mail zusammengestellt und deine Mail-App geöffnet. <em>Bitte schick die Nachricht ab</em> – dann melden wir uns mit Terminvorschlägen.</p>
 
         <div class="relay">
           <div class="relay__h">
             <p class="over">Es hat sich nichts geöffnet?</p>
-            <p class="relay__to">an <a href="mailto:gewinnspiel@fivehome.net" id="fallbackMail">gewinnspiel@fivehome.net</a></p>
+            <p class="relay__to">an <a href="mailto:hello@fivehome.net" id="fallbackMail">hello@fivehome.net</a></p>
           </div>
-          <p class="measure" style="font-size:13px;color:var(--ink-3)">Kein Problem – hier steht deine Teilnahme fertig zum Kopieren. Ab in eine neue Mail an die Adresse oben, abschicken, fertig.</p>
-          <textarea id="relayText" readonly rows="9" aria-label="Deine Teilnahme als Text zum Kopieren"></textarea>
+          <p class="measure" style="font-size:13px;color:var(--ink-2)">Kein Problem – hier steht deine Anfrage fertig zum Kopieren. Ab in eine neue Mail an die Adresse oben, abschicken, fertig. Oder ruf uns an: <a href="tel:+4925160688844">0251 60688844</a>.</p>
+          <textarea id="relayText" readonly rows="9" aria-label="Deine Anfrage als Text zum Kopieren"></textarea>
           <div class="relay__row">
             <button class="btn btn--quiet btn--slim" type="button" id="copy">Text kopieren</button>
             <button class="btn btn--quiet btn--slim" type="button" id="retry">E-Mail noch einmal öffnen</button>
@@ -671,14 +702,7 @@ footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size
           </div>
         </div>
 
-        <button class="btn btn--quiet" type="button" id="again">Noch jemanden eintragen</button>
-      </div>
-
-      <div class="closed" id="closed" hidden>
-        <p class="over">Teilnahmeschluss</p>
-        <h2>Das Los ist gefallen.</h2>
-        <p class="measure">Der Teilnahmezeitraum ist am 30. September 2026 zu Ende gegangen – neue Teilnahmen können wir leider nicht mehr annehmen. Die Gewinner benachrichtigen wir persönlich per E-Mail.</p>
-        <p class="measure" style="font-size:13px;color:var(--ink-3)">Du willst deine 3D-Analyse trotzdem? Sprich uns an der Theke an oder schreib an <a href="mailto:hello@fivehome.net">hello@fivehome.net</a>.</p>
+        <button class="btn btn--quiet" type="button" id="again">Noch eine Anfrage</button>
       </div>
     </section>
   </div>
@@ -690,23 +714,22 @@ footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size
       <div class="legal">
         <div class="legal__c">
           <div>
-            <h3>Teilnahmebedingungen</h3>
+            <h3>Preise &amp; Gutschein</h3>
             <ul>
-              <li>Veranstalter ist fivehome, Hafenstraße 64, Haus 2, 48153 Münster (<a href="https://fivehome.net/impressum">Impressum</a>). Teilnahmeberechtigt sind aktive fivehome-Mitglieder ab 18 Jahren; Mitarbeitende und deren Angehörige sind ausgeschlossen.</li>
-              <li>Der Teilnahmezeitraum läuft ab Veröffentlichung dieser Seite bis zum 30. September 2026, 23:59 Uhr. Eine Teilnahme pro Person. Ein zusätzliches Los, wenn ein weitergegebener Gutschein vor der Ziehung am 1. Oktober 2026 eingelöst wird.</li>
-              <li>Verlost werden drei fivehome 3D-Analysen im Wert von je 199 € (Mitgliederpreis). Die Gewinner werden am 1. Oktober 2026 unter allen gültigen Teilnahmen gezogen und per E-Mail benachrichtigt.</li>
-              <li>Der Gewinn ist nicht übertragbar und wird nicht in bar ausgezahlt. Einlösung bis 31. Dezember 2026 nach Terminvereinbarung.</li>
-              <li>Der Rechtsweg ist ausgeschlossen. Die Teilnahme ist unabhängig vom Erwerb einer Ware oder Leistung.</li>
+              <li>fivehome 3D-Analyse: 199 € für Mitglieder, 299 € für alle anderen. Herbst-Startpreis für Mitglieder 149 € bei Buchung bis 31. Oktober 2026.</li>
+              <li>fivehome Bewegungsprofil: 299 € für Mitglieder, 399 € für alle anderen. Verlaufskontrolle nach zwölf Wochen: 199 €.</li>
+              <li>Der digitale Gutschein über 100 € aus dem Gewinnspiel gilt einmalig für die fivehome 3D-Analyse (199 € statt 299 €), nur für Personen, die noch nicht bei fivehome trainieren, und nicht in Kombination mit anderen Aktionen. Gültig bis 31. Dezember 2026.</li>
+              <li>Gewinnspiel September 2026: Teilnahmeschluss war der 30. September 2026, die Ziehung am 1. Oktober 2026. Die Gewinne – drei fivehome 3D-Analysen – sind nicht übertragbar, werden nicht in bar ausgezahlt und sind bis 31. Dezember 2026 nach Terminvereinbarung einzulösen. Der Rechtsweg ist ausgeschlossen.</li>
             </ul>
           </div>
           <div>
-            <h3>Gutschein &amp; Datenschutz</h3>
+            <h3>Datenschutz</h3>
             <ul>
-              <li>Der digitale Gutschein über 100 € gilt einmalig für die fivehome 3D-Analyse (199 € statt 299 €), nur für Personen, die noch nicht bei fivehome trainieren, und nicht in Kombination mit anderen Aktionen. Gültig bis 31. Dezember 2026.</li>
-              <li>Wir verarbeiten deine Angaben ausschließlich zur Durchführung des Gewinnspiels und zum Versand des Gutscheins (Art. 6 Abs. 1 lit. b und f DSGVO). Eine Weitergabe an Dritte findet nicht statt.</li>
-              <li>Die Daten werden spätestens drei Monate nach Ende des Gewinnspiels gelöscht. Bei Gewinn speichern wir sie so lange, wie es die gesetzliche Aufbewahrung verlangt.</li>
-              <li>Der Vorname auf dem Gutschein dient nur der Personalisierung. Wir schreiben diese Person nicht an – du gibst den Gutschein selbst weiter.</li>
-              <li>Die Anmeldung zu den Club News ist freiwillig und jederzeit widerrufbar. Es gilt ergänzend unsere <a href="https://fivehome.net/datenschutzerklaeung">Datenschutzerklärung</a>; Fragen an <a href="mailto:hello@fivehome.net">hello@fivehome.net</a>.</li>
+              <li>Verantwortlich ist fivehome, Hafenstraße 64, Haus 2, 48153 Münster (<a href="https://fivehome.net/impressum">Impressum</a>).</li>
+              <li>Das Formular speichert nichts: Es stellt nur eine E-Mail an hello@fivehome.net zusammen, die du selbst abschickst.</li>
+              <li>Deine Angaben nutzen wir ausschließlich, um mit dir einen Termin zu vereinbaren (Art. 6 Abs. 1 lit. b DSGVO). Eine Weitergabe an Dritte findet nicht statt.</li>
+              <li>Teilnahmedaten aus dem Gewinnspiel löschen wir spätestens drei Monate nach dessen Ende; bei Gewinn so lange, wie es die gesetzliche Aufbewahrung verlangt.</li>
+              <li>Es gilt ergänzend unsere <a href="https://fivehome.net/datenschutzerklaeung">Datenschutzerklärung</a>; Fragen an <a href="mailto:hello@fivehome.net">hello@fivehome.net</a>.</li>
             </ul>
           </div>
         </div>
@@ -721,36 +744,50 @@ footer{padding:38px 0;margin-top:56px;border-top:1px solid var(--rule);font-size
 </div>
 
 <div class="dock" id="dock" aria-hidden="true">
-  <span class="dock__t" id="dockT">Drei 3D-Analysen</span>
-  <a class="btn btn--slim" href="#mitmachen" tabindex="-1">Teilnehmen</a>
+  <span class="dock__t" id="dockT">3D-Analyse &middot; 149 € für Mitglieder</span>
+  <a class="btn btn--slim" href="#termin" tabindex="-1">Termin anfragen</a>
 </div>
 
 <script>
 const CONFIG = {
-  empfaenger:"gewinnspiel@fivehome.net",
-  betreff:"Gewinnspiel fivehome 3D-Analyse – Teilnahme",
-  // Teilnahmeschluss, deutsche Zeit. Danach schaltet die Seite selbst um.
-  schluss:"2026-09-30T23:59:59+02:00"
+  empfaenger:"hello@fivehome.net",
+  betreff:"Terminanfrage fivehome 3D-Analyse",
+  // Ende des Herbst-Startpreises, deutsche Zeit (ab 25.10. Winterzeit).
+  // Danach schaltet die Seite selbst auf die regulären Preise um.
+  aktionBis:"2026-10-31T23:59:59+01:00"
 };
 
 const form=document.getElementById("entry"), done=document.getElementById("done"),
       err=document.getElementById("err"), doneName=document.getElementById("doneName"),
-      relayText=document.getElementById("relayText"), copyOk=document.getElementById("copyOk");
+      relayText=document.getElementById("relayText"), copyOk=document.getElementById("copyOk"),
+      codeBox=document.getElementById("codeBox"), wasBox=document.getElementById("wasBox");
 let letzterLink="";
 document.getElementById("fallbackMail").href="mailto:"+CONFIG.empfaenger;
 const mark=(el,bad)=>el.setAttribute("aria-invalid",bad?"true":"false");
+const wahl=name=>(form.querySelector('input[name="'+name+'"]:checked')||{}).value||"";
+
+// Gutschein-Feld nur für Neue; Gewinner brauchen keine Produktwahl.
+function felder(){
+  const wer=wahl("wer");
+  codeBox.hidden = wer!=="Neu bei fivehome";
+  wasBox.hidden = wer==="Gewinner Gewinnspiel September";
+}
+form.querySelectorAll('input[name="wer"]').forEach(r=>r.addEventListener("change",felder));
+felder();
 
 form.addEventListener("submit",function(e){
   e.preventDefault();
   const v=form.vorname.value.trim(), n=form.nachname.value.trim(), m=form.email.value.trim(),
-        f=form.fuer.value.trim(), a=form.agb.checked, news=form.news.checked;
+        tel=form.tel.value.trim(), wer=wahl("wer"), wann=form.wann.value.trim(),
+        code=codeBox.hidden?"":form.code.value.trim().toUpperCase(), a=form.agb.checked;
+  const was = wer==="Gewinner Gewinnspiel September" ? "3D-Analyse (Gewinn)" : wahl("was");
   const ok=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m);
   mark(form.vorname,!v); mark(form.nachname,!n); mark(form.email,!ok);
   const fehlt=[];
   if(!v) fehlt.push("dein Vorname");
   if(!n) fehlt.push("dein Nachname");
   if(!ok) fehlt.push("eine gültige E-Mail-Adresse");
-  if(!a) fehlt.push("die Bestätigung der Teilnahmebedingungen");
+  if(!a) fehlt.push("die Bestätigung des Datenschutzhinweises");
   if(fehlt.length){
     err.hidden=false;
     err.textContent="Es fehlt noch "+fehlt.join(", ").replace(/,([^,]*)$/," und$1")+".";
@@ -758,21 +795,24 @@ form.addEventListener("submit",function(e){
     return;
   }
   err.hidden=true;
-  const body=["Ich nehme am Gewinnspiel für die fivehome 3D-Analyse teil.","",
-    "Name: "+v+" "+n,"E-Mail: "+m,"Gutschein für: "+(f||"– noch offen –"),
-    "Club News: "+(news?"ja, bitte":"nein, danke"),
-    "Teilnahmebedingungen: gelesen und akzeptiert","","Viele Grüße",v].join("\n");
+  const zeilen=["Ich möchte einen Termin für die fivehome 3D-Analyse vereinbaren.","",
+    "Name: "+v+" "+n,"E-Mail: "+m];
+  if(tel) zeilen.push("Telefon: "+tel);
+  zeilen.push("Ich bin: "+wer,"Interesse: "+was);
+  if(code) zeilen.push("Gutschein-Code: "+code);
+  zeilen.push("Wunschzeit: "+(wann||"– flexibel –"),"","Viele Grüße",v);
+  const body=zeilen.join("\n"), betreff=CONFIG.betreff+" – "+v+" "+n;
   letzterLink="mailto:"+encodeURIComponent(CONFIG.empfaenger)
-    +"?subject="+encodeURIComponent(CONFIG.betreff+" – "+v+" "+n)+"&body="+encodeURIComponent(body);
+    +"?subject="+encodeURIComponent(betreff)+"&body="+encodeURIComponent(body);
   // Der Text steht auch ohne Mail-App bereit – das ist das Sicherheitsnetz.
-  relayText.value="Betreff: "+CONFIG.betreff+" – "+v+" "+n+"\n\n"+body;
+  relayText.value="Betreff: "+betreff+"\n\n"+body;
   window.location.href=letzterLink;
   doneName.textContent=v+", deine E-Mail ist vorbereitet.";
   form.hidden=true; done.hidden=false; done.scrollIntoView({behavior:"smooth",block:"start"});
 });
 
 document.getElementById("again").addEventListener("click",function(){
-  form.reset(); ["vorname","nachname","email"].forEach(k=>mark(form[k],false));
+  form.reset(); felder(); ["vorname","nachname","email"].forEach(k=>mark(form[k],false));
   copyOk.hidden=true; done.hidden=true; form.hidden=false; form.vorname.focus();
 });
 
@@ -789,44 +829,41 @@ document.getElementById("copy").addEventListener("click",async function(){
   copyOk.hidden=false;
 });
 
-/* ── Restlaufzeit, und der Absprung danach ──────────────────── */
-const schluss=new Date(CONFIG.schluss), rest=document.getElementById("rest"),
-      dock=document.getElementById("dock"), dockT=document.getElementById("dockT"),
-      closed=document.getElementById("closed"), mitmachen=document.getElementById("mitmachen");
+/* ── Herbst-Startpreis: Restlaufzeit, danach reguläre Preise ─── */
+const aktionBis=new Date(CONFIG.aktionBis), rest=document.getElementById("rest"),
+      dock=document.getElementById("dock"), dockT=document.getElementById("dockT");
 
-// Kalendertage bis zum Schlusstag: 0 = heute ist der letzte, -1 = vorbei.
+// Kalendertage bis zum letzten Aktionstag: 0 = heute ist der letzte, -1 = vorbei.
 function tage(){
   const jetzt=new Date();
-  if(jetzt>schluss) return -1;
+  if(jetzt>aktionBis) return -1;
   const heute=new Date(jetzt.getFullYear(),jetzt.getMonth(),jetzt.getDate()),
-        ziel=new Date(schluss.getFullYear(),schluss.getMonth(),schluss.getDate());
+        ziel=new Date(aktionBis.getFullYear(),aktionBis.getMonth(),aktionBis.getDate());
   return Math.round((ziel-heute)/86400000);
 }
 
 const t=tage();
 if(t<0){
-  // Vorbei: Formular und Aufforderungen treten ab, der Rest der Seite bleibt lesbar.
-  form.hidden=true; done.hidden=true; closed.hidden=false;
-  rest.textContent="Der Zeitraum ist beendet."; rest.hidden=false;
-  document.querySelectorAll('.opening__cta a[href="#mitmachen"]').forEach(a=>a.remove());
+  document.querySelectorAll(".js-aktion").forEach(el=>el.remove());
+  document.querySelectorAll(".js-regulaer").forEach(el=>el.hidden=false);
+  dockT.textContent="3D-Analyse · ab 199 €";
 }else{
-  const wort = t===0 ? "Heute ist der letzte Tag."
-             : t===1 ? "Nur noch heute und morgen."
-             : "Noch "+t+" Tage.";
-  rest.textContent=wort; rest.hidden=false;
-  dockT.textContent = t<=7 ? wort : "3 × 3D-Analyse";
+  rest.textContent = t===0 ? "Heute ist der letzte Tag."
+                   : t===1 ? "Nur noch heute und morgen."
+                   : "Noch "+t+" Tage.";
+  rest.hidden=false;
+}
 
-  // Der Balken kommt erst, wenn der Auftakt durch ist, und geht am Formular wieder.
-  if("IntersectionObserver" in window){
-    let abAuftakt=false, amFormular=false;
-    const zeig=()=>{ const an=abAuftakt&&!amFormular;
-      dock.classList.toggle("on",an); dock.setAttribute("aria-hidden",an?"false":"true");
-      dock.querySelector("a").tabIndex=an?0:-1; };
-    new IntersectionObserver(([e])=>{ abAuftakt=!e.isIntersecting; zeig(); },
-      {rootMargin:"-40% 0px 0px 0px"}).observe(document.querySelector(".opening"));
-    new IntersectionObserver(([e])=>{ amFormular=e.isIntersecting; zeig(); },
-      {threshold:0}).observe(mitmachen);
-  }
+// Der Balken kommt erst, wenn der Auftakt durch ist, und geht am Formular wieder.
+if("IntersectionObserver" in window){
+  let abAuftakt=false, amFormular=false;
+  const zeig=()=>{ const an=abAuftakt&&!amFormular;
+    dock.classList.toggle("on",an); dock.setAttribute("aria-hidden",an?"false":"true");
+    dock.querySelector("a").tabIndex=an?0:-1; };
+  new IntersectionObserver(([e])=>{ abAuftakt=!e.isIntersecting; zeig(); },
+    {rootMargin:"-40% 0px 0px 0px"}).observe(document.querySelector(".opening"));
+  new IntersectionObserver(([e])=>{ amFormular=e.isIntersecting; zeig(); },
+    {threshold:0}).observe(document.getElementById("termin"));
 }
 </script>
 
